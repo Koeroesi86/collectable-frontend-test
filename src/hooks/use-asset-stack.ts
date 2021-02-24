@@ -1,5 +1,5 @@
 import constate from "constate";
-import {useState} from "react";
+import { useState } from "react";
 
 import { SEED_ASSETS } from "../configuration/asset-seed";
 
