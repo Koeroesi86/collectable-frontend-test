@@ -8,11 +8,17 @@ import { Box } from "./styled/box";
  * It renders the current active asset from `useAssets` hook
  */
 const AssetCardStack = () => {
-  const { activeAsset } = useAssets();
+  const { activeAsset, next } = useAssets();
 
   return (
     <Box display="flex" alignItems="center" justifyContent="center">
-      <AssetCard asset={activeAsset} />
+      {activeAsset && (
+        <AssetCard
+          asset={activeAsset}
+          onLike={next}
+          onDislike={next}
+        />
+      )}
     </Box>
   );
 };
