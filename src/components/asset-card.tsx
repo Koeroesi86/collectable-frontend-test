@@ -1,4 +1,4 @@
-import { Asset } from "../configuration/assets";
+import { Asset } from "../configuration/asset-seed";
 import { Box } from "./styled/box";
 import { Typography } from "./styled/typography";
 
