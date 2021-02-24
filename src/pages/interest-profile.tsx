@@ -2,6 +2,7 @@ import { useState } from "react";
 import { AssetCardStack } from "../components/asset-card-stack";
 import { Page } from "../components/page";
 import { InterestProfile as InterestProfileInterface } from "../configuration/interest-profile";
+import { InterestResult } from "../components/interest-result";
 
 const InterestProfile = () => {
   const [interestProfile, setInterestProfile] = useState<InterestProfileInterface>();
@@ -11,7 +12,7 @@ const InterestProfile = () => {
       {!interestProfile ? (
         <AssetCardStack onComplete={(p) => setInterestProfile(p)}/>
         ) : (
-          JSON.stringify(interestProfile)
+        <InterestResult profile={interestProfile}/>
       )}
     </Page>
   );
